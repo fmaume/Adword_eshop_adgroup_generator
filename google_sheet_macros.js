@@ -1,14 +1,8 @@
 /** @OnlyCurrentDoc */
 /*
-function archive() {
-  var spreadsheet = SpreadsheetApp.getActive();
-  spreadsheet.getRange('A1').activate();
-  spreadsheet.insertSheet(1);
-  spreadsheet.getCurrentCell().setValue('colum 1');
-  spreadsheet.getRange('B1').activate();
-  spreadsheet.getCurrentCell().setValue('colum2');
-  spreadsheet.getRange('B2').activate();
-};
+Writen by Maume Fabian
+You can report bugs on Github : https://github.com/fmaume/Adword_eshop_adgroup_generator
+If you have question about use case you can contact me over linkedin: https://www.linkedin.com/in/fabian-maume-409b1830/?locale=en_US
 */
 
 //main function to check numer of dimension and call the proper funciton
