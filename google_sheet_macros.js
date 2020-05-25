@@ -152,11 +152,11 @@ function one_dimention(data) {
         
         //set Product Group
         cell_index_stemp = "C" + String(line_count + 1)
-        import_sheet.getRange(cell_index_stemp).setValue("*/" + dimension_name + "='" + dimention_value + "'")
+        import_sheet.getRange(cell_index_stemp).setValue("* /" + dimension_name + "='" + dimention_value + "'")
         cell_index_stemp = "C" + String(line_count + 2)
-        import_sheet.getRange(cell_index_stemp).setValue("*/")
+        import_sheet.getRange(cell_index_stemp).setValue("* /")
         cell_index_stemp = "C" + String(line_count + 3)
-        import_sheet.getRange(cell_index_stemp).setValue("*/" + dimension_name + "=*")
+        import_sheet.getRange(cell_index_stemp).setValue("* /" + dimension_name + "=*")
         
         //set Product Group type
         cell_index_stemp = "E" + String(line_count + 1)
@@ -205,9 +205,9 @@ function two_dimention(data){
         
         // create the subdicvision
         cell_index_stemp = "C" + String(line_count + 1)
-        import_sheet.getRange(cell_index_stemp).setValue("*/" )        
+        import_sheet.getRange(cell_index_stemp).setValue("* /" )        
         cell_index_stemp = "C" + String(line_count + 2)
-        import_sheet.getRange(cell_index_stemp).setValue("*/ " +dimension1_name + "='"+ dimention1_value + "' /" )        
+        import_sheet.getRange(cell_index_stemp).setValue("* / " +dimension1_name + "='"+ dimention1_value + "' /" )        
 
         
         // loop to fill in the Product Group type
@@ -217,16 +217,16 @@ function two_dimention(data){
           dimention2_value = dimention2[y]
           
           cell_index_stemp = "C" + String(line_count_L2 + 1)
-          import_sheet.getRange(cell_index_stemp).setValue("*/ " + dimension1_name + "='" + dimention1_value + "' / "+ dimension2_name + "='" + dimention2_value + "'"  )      
+          import_sheet.getRange(cell_index_stemp).setValue("* / " + dimension1_name + "='" + dimention1_value + "' / "+ dimension2_name + "='" + dimention2_value + "'"  )      
           
                    
         }
         // add the garbage collector
         line_count_L2 = get_line_count(import_sheet) 
         cell_index_stemp = "C" + String(line_count_L2 + 1)
-        import_sheet.getRange(cell_index_stemp).setValue("*/" + dimension1_name + "='"+dimention1_value+"' / " +  dimension2_name + "=*")
+        import_sheet.getRange(cell_index_stemp).setValue("* /" + dimension1_name + "='"+dimention1_value+"' / " +  dimension2_name + "=*")
         cell_index_stemp = "C" + String(line_count_L2 + 2)
-        import_sheet.getRange(cell_index_stemp).setValue("*/" + dimension1_name + "=*")
+        import_sheet.getRange(cell_index_stemp).setValue("* /" + dimension1_name + "=*")
         
         //set Product Group type
         cell_index_stemp = "E" + String(line_count + 1)
@@ -307,9 +307,9 @@ function three_dimention(data){
           
           // create the subdicvision
           cell_index_stemp = "C" + String(line_count_L2 + 1)
-          import_sheet.getRange(cell_index_stemp).setValue("*/" )        
+          import_sheet.getRange(cell_index_stemp).setValue("* /" )        
           cell_index_stemp = "C" + String(line_count_L2 + 2)
-          import_sheet.getRange(cell_index_stemp).setValue("*/ " +dimension1_name + "='"+ dimention1_value + "' /" )  
+          import_sheet.getRange(cell_index_stemp).setValue("* / " +dimension1_name + "='"+ dimention1_value + "' /" )  
                     
           cell_index_stemp = "E" + String(line_count_L2 + 1)
           import_sheet.getRange(cell_index_stemp).setValue("Subdivision")
@@ -319,7 +319,7 @@ function three_dimention(data){
           
           // create 3rd level subdivision
           cell_index_stemp = "C" + String(line_count_L2 + 3)
-          import_sheet.getRange(cell_index_stemp).setValue("*/ " + dimension1_name + "='" + dimention1_value + "' / "+ dimension2_name + "='" + dimention2_value + "' /"  )    
+          import_sheet.getRange(cell_index_stemp).setValue("* / " + dimension1_name + "='" + dimention1_value + "' / "+ dimension2_name + "='" + dimention2_value + "' /"  )    
           
           cell_index_stemp = "E" + String(line_count_L2 + 3)
           import_sheet.getRange(cell_index_stemp).setValue("Subdivision")
@@ -332,7 +332,7 @@ function three_dimention(data){
             
            
             cell_index_stemp = "C" + String(line_count_L3 + 1)
-            import_sheet.getRange(cell_index_stemp).setValue("*/ " + dimension1_name + "='" + dimention1_value + "' / "+ dimension2_name + "='" + dimention2_value + "' / " +  dimension3_name + "='" + dimention3_value + "'"  )      
+            import_sheet.getRange(cell_index_stemp).setValue("* / " + dimension1_name + "='" + dimention1_value + "' / "+ dimension2_name + "='" + dimention2_value + "' / " +  dimension3_name + "='" + dimention3_value + "'"  )      
             }
           // add the garbage collector
           line_count_L3_end = get_line_count(import_sheet) 
@@ -351,7 +351,7 @@ function three_dimention(data){
           import_sheet.getRange(cell_index_stemp).setValue("Excluded")
           
           cell_index_stemp = "C" + String(line_count_L3_end + 3)
-          import_sheet.getRange(cell_index_stemp).setValue("*/" + dimension1_name + "=*")      
+          import_sheet.getRange(cell_index_stemp).setValue("* /" + dimension1_name + "=*")      
           cell_index_stemp = "E" + String(line_count_L3_end + 3)
           import_sheet.getRange(cell_index_stemp).setValue("Excluded")
           
