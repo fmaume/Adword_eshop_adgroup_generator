@@ -152,11 +152,11 @@ function one_dimention(data) {
         
         //set Product Group
         cell_index_stemp = "C" + String(line_count + 1)
-        import_sheet.getRange(cell_index_stemp).setValue("* /" + dimension_name + "='" + dimention_value + "'")
+        import_sheet.getRange(cell_index_stemp).setValue("* / " + dimension_name + "='" + dimention_value + "'")
         cell_index_stemp = "C" + String(line_count + 2)
         import_sheet.getRange(cell_index_stemp).setValue("* /")
         cell_index_stemp = "C" + String(line_count + 3)
-        import_sheet.getRange(cell_index_stemp).setValue("* /" + dimension_name + "=*")
+        import_sheet.getRange(cell_index_stemp).setValue("* / " + dimension_name + "=*")
         
         //set Product Group type
         cell_index_stemp = "E" + String(line_count + 1)
@@ -224,9 +224,9 @@ function two_dimention(data){
         // add the garbage collector
         line_count_L2 = get_line_count(import_sheet) 
         cell_index_stemp = "C" + String(line_count_L2 + 1)
-        import_sheet.getRange(cell_index_stemp).setValue("* /" + dimension1_name + "='"+dimention1_value+"' / " +  dimension2_name + "=*")
+        import_sheet.getRange(cell_index_stemp).setValue("* / " + dimension1_name + "='"+dimention1_value+"' / " +  dimension2_name + "=*")
         cell_index_stemp = "C" + String(line_count_L2 + 2)
-        import_sheet.getRange(cell_index_stemp).setValue("* /" + dimension1_name + "=*")
+        import_sheet.getRange(cell_index_stemp).setValue("* / " + dimension1_name + "=*")
         
         //set Product Group type
         cell_index_stemp = "E" + String(line_count + 1)
@@ -337,7 +337,7 @@ function three_dimention(data){
           // add the garbage collector
           line_count_L3_end = get_line_count(import_sheet) 
           cell_index_stemp = "C" + String(line_count_L3_end + 1)
-          import_sheet.getRange(cell_index_stemp).setValue("*/" + dimension1_name + "='"+dimention1_value+"' / " +  dimension2_name + dimention2_value + "' / " + dimension3_name +  "=*")
+          import_sheet.getRange(cell_index_stemp).setValue("*/ " + dimension1_name + "='"+dimention1_value+"' / " +  dimension2_name + dimention2_value + "' / " + dimension3_name +  "=*")
           
           for (z = line_count_L2 + 4; z < line_count_L3_end + 2 ; z++) {
             cell_index_stemp = "E" + String(z)
@@ -346,12 +346,12 @@ function three_dimention(data){
           
           // add exlusion
           cell_index_stemp = "C" + String(line_count_L3_end + 2)
-          import_sheet.getRange(cell_index_stemp).setValue("*/" + dimension1_name + "='"+dimention1_value+"' / " +  dimension2_name   + "=*")
+          import_sheet.getRange(cell_index_stemp).setValue("* / " + dimension1_name + "='"+dimention1_value+"' / " +  dimension2_name   + "=*")
           cell_index_stemp = "E" + String(line_count_L3_end + 2)
           import_sheet.getRange(cell_index_stemp).setValue("Excluded")
           
           cell_index_stemp = "C" + String(line_count_L3_end + 3)
-          import_sheet.getRange(cell_index_stemp).setValue("* /" + dimension1_name + "=*")      
+          import_sheet.getRange(cell_index_stemp).setValue("* / " + dimension1_name + "=*")      
           cell_index_stemp = "E" + String(line_count_L3_end + 3)
           import_sheet.getRange(cell_index_stemp).setValue("Excluded")
           
